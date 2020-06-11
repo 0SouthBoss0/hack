@@ -9,6 +9,9 @@ import android.net.wifi.WifiManager;
 import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
+   //Функция reconnect менеджера wifi асинхронная. Она возвращает результат не дожидаясь окончания подключения.
+// В твоем коде получается, что ты не дождавшись окончания первой попытки подключения запускаешь вторую попытку - результаты могут быть самыми неожиданными.
+    
     final String networkSSID = ("mySSID");
     final String networkPassword = ("myPASS");
 
